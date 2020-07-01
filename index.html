@@ -13,8 +13,41 @@
   <body>
     <!--Шапка профиля-->
     <header class="header">
-      <!--  основная навигация-->
+      <div class="backdrop" data-backdrop>
+        <div class="modal">
+          <h2 class="modal-title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <form class="form js-speaker-form">
+            <label>
+              <input type="text" name="name" placeholder=" " />
+            </label>
+            <label>
+              <input type="email" name="email" />
+            </label>
+            <label>
+              <input type="tel" name="telephone" />
+            </label>
+            <label>
+              <textarea
+                class="comment"
+                name="comment"
+                rows="8"
+                placeholder=" "
+              ></textarea>
+            </label>
+            <label>
+              <input type="checkbox" />
+            </label>
+            <button class="button primary" type="submit">Отправить</button>
+          </form>
+          <svg class="icon-close" data-close-modal>
+            <use href="./images/symbol-defs1.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
       <div class="container main-header">
+        <!--  основная навигация-->
         <nav class="nav main-header">
           <a href="./index.html" class="logo">
             <span class="logo-web">Wed</span>
@@ -22,10 +55,13 @@
           </a>
           <ul class="list header-ul">
             <li class="item">
-              <a href="./index.html" class="link active-link">Студия</a>
+              <a href="./index.html" class="link active-link">
+                Студия
+                <div class="active"></div>
+              </a>
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
+              <a href="./portfolio.html" class="link">Портфолио </a>
             </li>
             <li class="item">
               <a href="#" class="link">Студия</a>
@@ -34,12 +70,32 @@
         </nav>
         <ul class="list header-ul contact">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="contact-link envelope">
-              info@devstudio.com
+            <a href="mailto:info@devstudio.com" class="contact-link flex-link">
+              <div class="in-bl">
+                <svg class="icon-envelope">
+                  <use
+                    width="16"
+                    heidth="12"
+                    href="./images/symbol-defs1.svg#icon-envelope"
+                  ></use>
+                </svg>
+              </div>
+              <span>
+                info@devstudio.com
+              </span>
             </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="contact-link smartphone">
+            <a href="tel:+380961111111" class="contact-link">
+              <div class="in-bl">
+                <svg class="icon-smartphone">
+                  <use
+                    width="16"
+                    heidth="12"
+                    href="./images/symbol-defs1.svg#icon-smartphone"
+                  ></use>
+                </svg>
+              </div>
               +38 096 111 11 11
             </a>
           </li>
@@ -55,7 +111,7 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="" class="button primary">
+          <a href="" class="button primary" data-open-modal>
             Заказать услугу
           </a>
         </div>
@@ -67,6 +123,16 @@
           <h2 class="section-title visualli-hidden">Особенности</h2>
           <ul class="list flex-featurest">
             <li class="element">
+              <div class="in-bl">
+                <svg class="icon-antenna">
+                  <use
+                    x="100"
+                    width="70"
+                    heidth="70"
+                    href="./images/symbol-defs1.svg#icon-antenna"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="section-title features">
                 Внимание к деталям
               </h3>
@@ -76,6 +142,16 @@
               </p>
             </li>
             <li class="element">
+              <div class="in-bl wrt">
+                <svg class="icon-diagram">
+                  <use
+                    x="100"
+                    width="70"
+                    heidth="70"
+                    href="./images/symbol-defs1.svg#icon-diagram"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="section-title features">
                 Пунктуальность
               </h3>
@@ -85,6 +161,16 @@
               </p>
             </li>
             <li class="element">
+              <div class="in-bl">
+                <svg class="icon-clock">
+                  <use
+                    x="100"
+                    width="70"
+                    heidth="70"
+                    href="./images/symbol-defs1.svg#icon-clock"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="section-title features">
                 Планирование
               </h3>
@@ -94,6 +180,16 @@
               </p>
             </li>
             <li class="element">
+              <div class="in-bl">
+                <svg class="icon-astronaut">
+                  <use
+                    x="100"
+                    width="70"
+                    heidth="70"
+                    href="./images/symbol-defs1.svg#icon-astronaut"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="section-title features">
                 Современные технологии
               </h3>
@@ -117,9 +213,9 @@
                 width="370"
                 alt="ноутбук"
               />
-              <a href="#" class="link center">
+              <p class="link center">
                 Десктопные приложения
-              </a>
+              </p>
             </li>
             <li class="element">
               <img
@@ -128,9 +224,9 @@
                 width="370"
                 alt="смартфон"
               />
-              <a href="#" class="link center">
+              <p class="link center">
                 Мобильные приложения
-              </a>
+              </p>
             </li>
             <li class="element">
               <img
@@ -139,9 +235,9 @@
                 width="370"
                 alt="apple mac"
               />
-              <a href="#" class="link center">
+              <p class="link center">
                 Дизайнерские решения
-              </a>
+              </p>
             </li>
           </ul>
         </div>
@@ -174,28 +270,56 @@
                       href="#"
                       aria-label="instagram"
                       class="link icon-instagram"
-                    ></a>
+                    >
+                      <svg class="icon-instagram">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
-                    <a
-                      href="#"
-                      aria-label="twitter"
-                      class="link icon-twitter"
-                    ></a>
+                    <a href="#" aria-label="twitter" class="link icon-twitter">
+                      <svg class="icon-twitter">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="facebook"
                       class="link icon-facebook"
-                    ></a>
+                    >
+                      <svg class="icon-facebook">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="linkedin"
                       class="link icon-linkedin"
-                    ></a>
+                    >
+                      <svg class="icon-linkedin">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -221,28 +345,56 @@
                       href="#"
                       aria-label="instagram"
                       class="link icon-instagram"
-                    ></a>
+                    >
+                      <svg class="icon-instagram">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
-                    <a
-                      href="#"
-                      aria-label="twitter"
-                      class="link icon-twitter"
-                    ></a>
+                    <a href="#" aria-label="twitter" class="link icon-twitter">
+                      <svg class="icon-twitter">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="facebook"
                       class="link icon-facebook"
-                    ></a>
+                    >
+                      <svg class="icon-facebook">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="linkedin"
                       class="link icon-linkedin"
-                    ></a>
+                    >
+                      <svg class="icon-linkedin">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -268,28 +420,56 @@
                       href="#"
                       aria-label="instagram"
                       class="link icon-instagram"
-                    ></a>
+                    >
+                      <svg class="icon-instagram">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
-                    <a
-                      href="#"
-                      aria-label="twitter"
-                      class="link icon-twitter"
-                    ></a>
+                    <a href="#" aria-label="twitter" class="link icon-twitter">
+                      <svg class="icon-twitter">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="facebook"
                       class="link icon-facebook"
-                    ></a>
+                    >
+                      <svg class="icon-facebook">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="linkedin"
                       class="link icon-linkedin"
-                    ></a>
+                    >
+                      <svg class="icon-linkedin">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -315,28 +495,56 @@
                       href="#"
                       aria-label="instagram"
                       class="link icon-instagram"
-                    ></a>
+                    >
+                      <svg class="icon-instagram">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
-                    <a
-                      href="#"
-                      aria-label="twitter"
-                      class="link icon-twitter"
-                    ></a>
+                    <a href="#" aria-label="twitter" class="link icon-twitter">
+                      <svg class="icon-twitter">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="facebook"
                       class="link icon-facebook"
-                    ></a>
+                    >
+                      <svg class="icon-facebook">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="element">
                     <a
                       href="#"
                       aria-label="linkedin"
                       class="link icon-linkedin"
-                    ></a>
+                    >
+                      <svg class="icon-linkedin">
+                        <use
+                          width="20"
+                          heidth="20"
+                          href="./images/symbol-defs1.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -353,35 +561,80 @@
           <!-- логотипы компаний -->
           <ul class="list customers">
             <li class="element">
-              <a href="#" class="customers-link" aria-label="YA & CO"
-                >YA & CO</a
-              >
+              <a href="#" class="customers-link link" aria-label="YA & CO">
+                <svg class="icon-logo-1 icon">
+                  <use
+                    width="45"
+                    heidth="50"
+                    x="63"
+                    href="./images/symbol-defs1.svg#icon-logo-1"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
               <a
                 href="#"
                 class="customers-link"
                 aria-label="company tagline here"
-                >company tagline here</a
               >
+                <svg class="icon-logo-2 icon">
+                  <use
+                    width="40"
+                    heidth="52"
+                    x="65"
+                    href="./images/symbol-defs1.svg#icon-logo-2"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" class="customers-link" aria-label="company"
-                >company</a
-              >
+              <a href="#" class="customers-link" aria-label="company">
+                <svg class="icon-logo-3 icon">
+                  <use
+                    width="41"
+                    heidth="43"
+                    x="65"
+                    href="./images/symbol-defs1.svg#icon-logo-3"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" class="customers-link" aria-label="FOSTER PETERS"
-                >FOSTER PETERS</a
-              >
+              <a href="#" class="customers-link" aria-label="FOSTER PETERS">
+                <svg class="icon-logo-4 icon">
+                  <use
+                    width="80"
+                    heidth="42"
+                    x="45"
+                    href="./images/symbol-defs1.svg#icon-logo-4"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" class="customers-link" aria-label="brand">brand</a>
+              <a href="#" class="customers-link" aria-label="brand">
+                <svg class="icon-logo-5 icon">
+                  <use
+                    width="59"
+                    heidth="47"
+                    x="56"
+                    href="./images/symbol-defs1.svg#icon-logo-5"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" class="customers-link" aria-label="company tag line"
-                >company tag line</a
-              >
+              <a href="#" class="customers-link" aria-label="company tag line">
+                <svg class="icon-logo-6 icon">
+                  <use
+                    width="89"
+                    heidth="46"
+                    x="41"
+                    href="./images/symbol-defs1.svg#icon-logo-6"
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -409,26 +662,52 @@
           </address>
         </div>
         <div>
-          <b class="b">
-            присоединяйтесь
-          </b>
+          <b class="b"> присоединяйтесь </b>
           <!-- соц.сети -->
           <ul class="list footer__social-networks">
             <li class="element">
-              <a
-                href="#"
-                aria-label="instagram"
-                class="link icon-instagram"
-              ></a>
+              <a href="#" aria-label="instagram" class="link icon-instagram">
+                <svg class="icon-instagram">
+                  <use
+                    width="20"
+                    heidth="20"
+                    href="./images/symbol-defs1.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" aria-label="twitter" class="link icon-twitter"></a>
+              <a href="#" aria-label="twitter" class="link icon-twitter">
+                <svg class="icon-twitter">
+                  <use
+                    width="20"
+                    heidth="20"
+                    href="./images/symbol-defs1.svg#icon-twitter"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" aria-label="facebook" class="link icon-facebook"></a>
+              <a href="#" aria-label="facebook" class="link icon-facebook">
+                <svg class="icon-facebook">
+                  <use
+                    width="20"
+                    heidth="20"
+                    href="./images/symbol-defs1.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="element">
-              <a href="#" aria-label="linkedin" class="link icon-linkedin"></a>
+              <a href="#" aria-label="linkedin" class="link icon-linkedin">
+                <svg class="icon-linkedin">
+                  <use
+                    width="20"
+                    heidth="20"
+                    href="./images/symbol-defs1.svg#icon-linkedin"
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -438,5 +717,35 @@
       </div>
       <p class="copyright container">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+    </script>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
